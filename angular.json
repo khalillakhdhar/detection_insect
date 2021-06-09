@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "cfcd5269-f66e-4c66-b950-de57acac1502"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "detection": {
+    "vrproject": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/detection",
+            "outputPath": "dist/vrproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "detection:build"
+            "browserTarget": "vrproject:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "detection:build:production"
+              "browserTarget": "vrproject:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "detection:build"
+            "browserTarget": "vrproject:build"
           }
         },
         "test": {
@@ -113,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "detection:serve"
+            "devServerTarget": "vrproject:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "detection:serve:production"
+              "devServerTarget": "vrproject:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "detection"
+  "defaultProject": "vrproject"
 }
